@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scss/trip_1.css"/>
+    <script type="text/javascript" src="../js/getStationNamesFromDB.js" defer></script>
+    <script type="module" src="../js/calculateTrip.js" defer></script>
+    <title>Home</title>
+</head>
+
+<body>
+<header>
+    <img id="hero_img" src="../scss/img/hero.jpeg"
+         alt="background image in the header. It is a cartoon drawing of trees mountains and a setting sun."/>
+
+    <nav>
+        <div id="back_icon">
+            <img id="back_icon_img" src="../scss/img/play-solid.svg" alt="arrow for going back">
+        </div>
+        <span>ga terug</span>
+    </nav>
+
+    <img id="start_flag" src="../scss/img/start_flag.png" alt="een rode vlag als label voor de begin input"/>
+    <input id="from_input" list="from_list" type="text" aria-label="van" placeholder="van" class="station_inputs" autocomplete="off"/>
+    <datalist id="from_list" class="station_lists"></datalist>
+    <input id="to_input" list="to_list" type="text" aria-label="naar" placeholder="naar" class="station_inputs" autocomplete="off"/>
+    <datalist id="to_list" class="station_lists"></datalist>
+    <img id="end_flag" src="../scss/img/end_flag.png"
+         alt="een wit-zwart gebolkte vlag als label voor de eind input"/>
+    <img id="rails" src="../scss/img/rails.png" alt="rails on the background image"/>
+
+    <button type="submit" id="plan_submit" name="submitMeetingEdit">Plan reis</button>
+</header>
+<main id="main">
+</main>
+</body>
+</html>

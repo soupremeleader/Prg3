@@ -1,0 +1,25 @@
+{
+  "type": "Sprinter",
+  "beginStation": {
+    "naam": "Den Haag Centraal",
+    "aankomst": "12:54",
+    "platform": "1"
+  },
+  "eindStation": {
+    "eind": "Dordrecht",
+    "aankomst": "13:49",
+    "platform": "5"
+  },
+  "stations": {
+    "0" : {
+      "naam": "Station Den Haag Centraal",
+      "tijd": "12:54",
+      "platform": 1
+    },
+    "1" : {
+      "naam": "Station Dordrecht",
+      "tijd": "13:49",
+      "platform": 5
+    }
+  }
+}
