@@ -2,27 +2,53 @@
 
 require_once "includes/database.php";
 
-$_GET['id'] = 1;
-$station_id = $_GET['id'];
+$_GET['name'] = 1;
+$station_id = $_GET['name'];
 
-$query = "SELECT * FROM stations WHERE id = $station_id";
+$query = "SELECT * FROM stations WHERE id = '$station_id'";
 
 $result = mysqli_query($db, $query)
     or die('error: '.mysqli_error($db).' with query '.$query);
 
-$station = [];
+$stations = [];
 
 while($row = mysqli_fetch_assoc($result)){
-    $station[] = $row;
+    $stations[] = $row;
 }
 
-$img_src = $station[0]["image"];
-$station_name = $station[0]["station"];
-$station_info = $station[0]["info"];
-$station_toilets = $station[0]["toilets"];
-$station_elevators = $station[0]["elevator"];
-$station_ov = $station[0]["ov"];
-$station_shops = $station[0]["shops"];
+$query = "SELECT * FROM icons JOIN types ON icons.type_id = types.id WHERE station_id = $station_id";
+
+$result = mysqli_query($db, $query)
+    or die('error: '.mysqli_error($db).' with query '.$query);
+
+$icons = [];
+
+while($row = mysqli_fetch_assoc($result)){
+    $icons[] = $row;
+}
+
+foreach($icons as $icon) {
+    switch($icon['name']) {
+        case "info": {
+            $station_info = $icon['amount'];
+        }
+        case "toilets": {
+            $station_toilets = $icon["amount"];
+        }
+        case "elevators": {
+            $station_elevators = $icon["amount"];
+        }
+        case "ov": {
+            $station_ov = $icon["amount"];
+        }
+        case "shops": {
+            $station_shops = $icon["amount"];
+        }
+    }
+}
+
+$img_src = $stations[0]["image"];
+$station_name = $stations[0]["station"];
 
 ?>
 
@@ -33,7 +59,8 @@ $station_shops = $station[0]["shops"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stationmap.css">
+    <link rel="stylesheet" href="css/stationmap.css">
+    <script type="text/javascript" src="stationmap.js" defer></script>
     <script src="https://kit.fontawesome.com/f6c855ada2.js" crossorigin="anonymous"></script>
 </head>
 
@@ -54,7 +81,7 @@ $station_shops = $station[0]["shops"];
     </section>
 
     <section id = "station_map">
-        <img src = <?= $img_src ?> />
+        <img src = <?= $img_src ?> id="station_map_img" />
     </section>
 
     <section id = "facilities">
@@ -63,28 +90,28 @@ $station_shops = $station[0]["shops"];
         <section id = facility_icons>
             <section id = "icons_1">
                 <section class = "map_icon">
-                    <img src = "images/icons/infoIcon.png" />
+                    <img src = "images/icons/infoIcon.png" data-id=<?= $station_id ?> data-type="info" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Informatie punten </h3>
                         <P> <?= $station_info ?> aanwezig </P>
                     </section>
                 </section>
                 <section class = "map_icon">
-                    <img src = "images/icons/wcIcon.png" />
+                    <img src = "images/icons/wcIcon.png" data-id=<?= $station_id ?> data-type="toilets" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Toiletten </h3>
                         <P> <?= $station_toilets ?> aanwezig </P>
                     </section>
                 </section>
                 <section class = "map_icon">
-                    <img src = "images/icons/elevatorIcon.png" />
+                    <img src = "images/icons/elevatorIcon.png" data-id=<?= $station_id ?> data-type="elevators" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Liften </h3>
                         <P> <?= $station_elevators ?> aanwezig </P>
                     </section>
                 </section>
                 <section class = "map_icon">
-                    <img src = "images/icons/stairsIcon.png" />
+                    <img src = "images/icons/stairsIcon.png" data-id=<?= $station_id ?> data-type="stairs" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Trappen </h3>
                     </section>
@@ -93,27 +120,27 @@ $station_shops = $station[0]["shops"];
 
             <section id = "icons_2">
                 <section class = "map_icon">
-                    <img src = "images/icons/ovIcon.png" />
+                    <img src = "images/icons/ovIcon.png" data-id=<?= $station_id ?> data-type="ov" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> OV oplaad punten </h3>
                         <P> <?= $station_ov ?> aanwezig </P>
                     </section>
                 </section>
                 <section class = "map_icon">
-                    <img src = "images/icons/benchIcon.png" />
+                    <img src = "images/icons/benchIcon.png" data-id=<?= $station_id ?> data-type="bench" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Zitplaatsen </h3>
                     </section>
                 </section>
                 <section class = "map_icon">
-                    <img src = "images/icons/shopIcon.png" />
+                    <img src = "images/icons/shopIcon.png" data-id=<?= $station_id ?> data-type="shop" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Winkels </h3>
                         <P> <?= $station_shops ?> aanwezig </P>
                     </section>
                 </section>
-                <section class = "map_icon">
-                    <img src = "images/icons/incheckIcon.png" />
+                <section class = "map_icon no_variant">
+                    <img src = "images/icons/incheckIcon.png"/>
                     <section class = "icon_description">
                         <h3> Incheck poortjes </h3>
                     </section>

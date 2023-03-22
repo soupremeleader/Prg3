@@ -1,0 +1,138 @@
+$dark_blue: rgba(32, 29, 59, 1);
+$blue: rgba(67, 60, 122, 1);
+$yellow: rgba(219, 212, 100, 1);
+$white: rgba(247, 247, 252, 1);
+
+body {
+    background-color: $blue;
+    font-family: Segoe UI;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    height: 5vh;
+
+    button {
+        background: none;
+        border: none;
+    }
+    
+}
+
+#back_button {
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:visited {
+            color: $white;
+        }
+    }
+}
+
+#favorites {
+    a {
+        color: $yellow;
+        
+        &:visited {
+            color: $yellow;
+        }
+    }
+}
+
+#current_station {
+    margin-left: 5vw;
+    margin-bottom: 3vh;
+
+    h1 {
+        color: $white;
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    h2 {
+        color: $yellow;
+        font-size:25px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+#station_map {
+    margin-left: 4.5vw;
+    width: 90vw;
+    height: 30vh;
+    border: 2px solid $dark_blue;
+    border-radius: 2vw;
+    overflow: hidden;
+
+    img {
+        width: 90vw;
+        height: 30vh;
+    }
+}
+
+#facilities {
+    width: 90vw;
+
+    h2 {
+        color: $white;
+        font-size: 25px;
+        margin-left: 5vw;
+    }
+}
+
+#facility_icons {
+    width: 70vw;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    img {
+        width: 15vw;
+    }
+}
+
+
+.map_icon {
+    width: 43vw;
+    height: 15vw;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    margin-bottom: 2vh;
+
+    p {
+        color: $yellow;
+        margin-left: 2vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+
+    h3 {
+        color: $white;
+        margin-left: 2vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 15px;
+    }
+}
+
+.icon_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
