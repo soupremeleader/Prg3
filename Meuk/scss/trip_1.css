@@ -44,6 +44,7 @@ nav {
   font-size: 16px;
   color: rgb(67, 60, 122);
   position: absolute;
+  width: 100%;
   margin-top: 2px;
 }
 nav > span {
@@ -64,6 +65,29 @@ nav > span {
   transform: scaleX(-1);
 }
 
+#favourite_tap_link {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+#favourite_tap_div {
+  position: relative;
+}
+
+#favourite_tap_span {
+  color: rgb(247, 247, 252);
+  font-weight: lighter;
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 4px;
+}
+
+#favourite_tap_img {
+  margin-bottom: -10px;
+}
+
 #from_input, #to_input {
   position: absolute;
   border-radius: 5px;
@@ -81,6 +105,16 @@ nav > span {
 #to_input {
   margin-top: 26%;
   margin-left: 8%;
+}
+
+#favourites {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  filter: invert(20%) sepia(15%) saturate(4192%) hue-rotate(217deg) brightness(95%) contrast(82%);
+  margin-top: 13%;
+  margin-left: 90%;
+  z-index: 1;
 }
 
 #start_flag, #end_flag {
@@ -171,7 +205,7 @@ main {
 }
 
 .arrivalTimeDiv, .platformDiv {
-  color: #dbd464;
+  color: rgb(219, 212, 100);
   font-weight: normal;
   font-size: 0.9em;
 }

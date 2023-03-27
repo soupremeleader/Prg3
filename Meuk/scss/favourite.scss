@@ -1,0 +1,104 @@
+@import 'var';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+body {
+  position: absolute;
+  width: 412px;
+  height: 892px;
+  background-color: $light_purple;
+  overflow: hidden;
+}
+
+header {
+  height: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+nav {
+  height: 20px;
+  display: flex;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: $purple;
+  position: absolute;
+  width: 100%;
+
+  margin-top: 2px;
+
+  > span {
+    margin-left: 24px;
+  }
+}
+
+#back_link {
+  display: flex;
+  height: 16px;
+  width: 32%;
+  aspect-ratio: 1/1;
+  margin: 2px;
+  text-decoration: none;
+  color: $off-white;
+  font-weight: lighter;
+}
+
+#back_icon {
+  height: 16px;
+  aspect-ratio: 1/1;
+  margin: 2px;
+}
+
+#back_icon_img {
+  filter: $yellow_filter;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(-1);
+}
+
+#favourite_tap_link {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 0;
+  margin-left: auto;
+
+}
+
+#favourite_tap_div {
+  position: relative;
+}
+
+#favourite_tap_span {
+  color: $off-white;
+  //font-weight: lighter;
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 7px;
+}
+
+#favourite_tap_img {
+  width: 100%;
+  margin-bottom: -12px;
+  height: 30px;
+}
+
+.purple {
+  background-color: $purple;
+}
+
+.favourite_text {
+  color: $off_white;
+  padding: 5%;
+}
+.from_text, .to_text {
+  color: $yellow;
+  font-weight: bold;
+  padding-right: 5px;
+}

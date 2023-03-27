@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../scss/trip_1.css"/>
     <script type="text/javascript" src="../js/getStationNamesFromDB.js" defer></script>
     <script type="module" src="../js/calculateTrip.js" defer></script>
+    <script type="module" src="../js/moveRoute.js" defer></script>
+    <script type="module" src="../js/addFavourites.js" defer></script>
     <title>Home</title>
 </head>
 
@@ -20,12 +22,22 @@
             <img id="back_icon_img" src="../scss/img/play-solid.svg" alt="arrow for going back">
         </div>
         <span>ga terug</span>
+
+        <a id="favourite_tap_link" href="favouriteStations.html">
+            <div id="favourite_tap_div">
+                <img src="../scss/img/favourite%20tap.png" alt="favorieten tap" id="favourite_tap_img"/>
+            </div>
+            <span id="favourite_tap_span">favorieten</span>
+        </a>
     </nav>
 
     <img id="start_flag" src="../scss/img/start_flag.png" alt="een rode vlag als label voor de begin input"/>
-    <input id="from_input" list="from_list" type="text" aria-label="van" placeholder="van" class="station_inputs" autocomplete="off"/>
+    <input id="from_input" list="from_list" type="text" aria-label="van" placeholder="van" class="station_inputs"
+           autocomplete="off"/>
     <datalist id="from_list" class="station_lists"></datalist>
-    <input id="to_input" list="to_list" type="text" aria-label="naar" placeholder="naar" class="station_inputs" autocomplete="off"/>
+    <img id="favourites" src="../scss/img/star-regular.svg" alt="een open ster"/>
+    <input id="to_input" list="to_list" type="text" aria-label="naar" placeholder="naar" class="station_inputs"
+           autocomplete="off"/>
     <datalist id="to_list" class="station_lists"></datalist>
     <img id="end_flag" src="../scss/img/end_flag.png"
          alt="een wit-zwart gebolkte vlag als label voor de eind input"/>
