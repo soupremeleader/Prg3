@@ -61,6 +61,7 @@ $station_name = $stations[0]["station"];
     <title>Document</title>
     <link rel="stylesheet" href="css/stationmap.css">
     <script type="text/javascript" src="stationmap.js" defer></script>
+    <script type="text/javascript" src="favoriteStation.js" defer></script>
     <script src="https://kit.fontawesome.com/f6c855ada2.js" crossorigin="anonymous"></script>
 </head>
 
@@ -71,17 +72,20 @@ $station_name = $stations[0]["station"];
             <button> <a href=""> <i class="fa-solid fa-caret-left"></i> Ga terug </a> </button>
         </section>
         <section id = "favorites">
-            <button> <a href=""> <i class="fa-solid fa-star fa-xl"></i> </a> </button>
+            <button> <a href="favoriteStationsAll.php"> <i class="fa-solid fa-star fa-xl"></i> </a> </button>
         </section>
     </header>
 
     <section id = "current_station">
         <h1> Huidig station </h1>
-        <h2> <?= $station_name ?> </h2>
+        <section id = "markFavorite" data-name="<?= $station_name ?>" data-id="<?= $station_id ?>">
+            <h2> <?= $station_name ?> </h2> <button> 
+            <a href="" id = "markFavoriteButton" class="white"> <i class="fa-solid fa-star fa-xl"></i> </a> </button>
+        </section>
     </section>
 
     <section id = "station_map">
-        <img src = <?= $img_src ?> id="station_map_img" />
+        <img src = <?= $img_src ?> id="station_map_img"/>
     </section>
 
     <section id = "facilities">

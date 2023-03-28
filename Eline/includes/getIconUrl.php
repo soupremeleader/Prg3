@@ -1,6 +1,6 @@
 <?php
 require_once "../includes/database.php";
-// echo("hello");
+
 header('Content-type: application/json; charset=utf-8');
 $jsonIconInfo = file_get_contents('php://input');
 

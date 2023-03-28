@@ -52,6 +52,22 @@ header button {
   margin-top: 0;
   margin-bottom: 0;
 }
+#current_station #markFavorite {
+  display: flex;
+  flex-direction: row;
+}
+#current_station #markFavorite button {
+  background: none;
+  border: none;
+}
+
+.yellow {
+  color: rgb(219, 212, 100);
+}
+
+.white {
+  color: rgb(247, 247, 252);
+}
 
 #station_map {
   margin-left: 4.5vw;
@@ -113,4 +129,18 @@ header button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.linkStation {
+  color: rgb(219, 212, 100);
+  text-decoration: none;
+  font-size: 22px;
+}
+
+#overviewFavorites {
+  margin-left: 5vw;
+}
+#overviewFavorites h1 {
+  color: rgb(247, 247, 252);
+  font-size: 30px;
 }/*# sourceMappingURL=stationmap.css.map */
