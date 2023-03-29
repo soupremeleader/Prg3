@@ -143,4 +143,39 @@ header button {
 #overviewFavorites h1 {
   color: rgb(247, 247, 252);
   font-size: 30px;
+}
+
+.modal {
+  background-color: rgb(32, 29, 59);
+  border: 2px solid rgb(67, 60, 122);
+  border-radius: 2vw;
+  height: 45vh;
+}
+.modal button {
+  background: none;
+  border: none;
+  color: rgb(219, 212, 100);
+  margin-left: 70vw;
+}
+
+.modal-content h2 {
+  color: rgb(247, 247, 252);
+  font-size: 27px;
+  margin-top: 0px;
+}
+.modal-content p {
+  color: rgb(219, 212, 100);
+  font-size: 18px;
+  margin: 10px 0px;
+}
+.modal-content a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(247, 247, 252);
+}
+
+.favorited-station-name {
+  color: rgb(219, 212, 100);
+  font-size: 20px;
 }/*# sourceMappingURL=stationmap.css.map */

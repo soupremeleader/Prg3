@@ -29,19 +29,19 @@ while($row = mysqli_fetch_assoc($result)){
 
 foreach($icons as $icon) {
     switch($icon['name']) {
-        case "info": {
+        case "informatie punten": {
             $station_info = $icon['amount'];
         }
-        case "toilets": {
+        case "toiletten": {
             $station_toilets = $icon["amount"];
         }
-        case "elevators": {
+        case "liften": {
             $station_elevators = $icon["amount"];
         }
-        case "ov": {
+        case "ov-oplaad punten": {
             $station_ov = $icon["amount"];
         }
-        case "shops": {
+        case "winkels": {
             $station_shops = $icon["amount"];
         }
     }

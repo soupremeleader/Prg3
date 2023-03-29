@@ -22,6 +22,13 @@
         <h1> Favoriete stations: </h1>
         <section id = "favoritedStations">
 
+            <dialog class="modal" id="favotite-station-detail">
+                <button class="modal-close" id="close-details"> <i class="fa-solid fa-xmark fa-2xl"></i> </button>
+                <section class="modal-content" id="favorite-station-details">
+
+                </section>
+            </dialog>
+
         </section>
     </section>
 

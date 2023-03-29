@@ -168,3 +168,43 @@ header {
         font-size: 30px;
     }
 }
+
+.modal {
+    background-color: $dark_blue;
+    border: 2px solid $blue;
+    border-radius: 2vw;
+    height: 45vh;
+
+    button {
+        background: none;
+        border: none;
+        color: $yellow;
+        margin-left: 70vw;
+    }
+}
+
+.modal-content {
+    h2 {
+        color: $white;
+        font-size: 27px;
+        margin-top: 0px;
+    }
+
+    p {
+        color: $yellow;
+        font-size: 18px;
+        margin: 10px 0px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: $white;
+    }
+}
+
+.favorited-station-name {
+    color: $yellow;
+    font-size: 20px;
+}
