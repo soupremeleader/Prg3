@@ -64,6 +64,8 @@ function clickAgain(e) {
 
 function ajaxSuccessHandler(data) {
 
+    console.log(data);
+
     if(clicked) {
         clicked = false;
         map.src = currentSrc;

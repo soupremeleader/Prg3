@@ -94,21 +94,21 @@ $station_name = $stations[0]["station"];
         <section id = facility_icons>
             <section id = "icons_1">
                 <section class = "map_icon">
-                    <img src = "images/icons/infoIcon.png" data-id=<?= $station_id ?> data-type="info" class="iconImgs"/>
+                    <img src = "images/icons/infoIcon.png" data-id=<?= $station_id ?> data-type="informatie punten" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Informatie punten </h3>
                         <P> <?= $station_info ?> aanwezig </P>
                     </section>
                 </section>
                 <section class = "map_icon">
-                    <img src = "images/icons/wcIcon.png" data-id=<?= $station_id ?> data-type="toilets" class="iconImgs"/>
+                    <img src = "images/icons/wcIcon.png" data-id=<?= $station_id ?> data-type="toiletten" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Toiletten </h3>
                         <P> <?= $station_toilets ?> aanwezig </P>
                     </section>
                 </section>
                 <section class = "map_icon">
-                    <img src = "images/icons/elevatorIcon.png" data-id=<?= $station_id ?> data-type="elevators" class="iconImgs"/>
+                    <img src = "images/icons/elevatorIcon.png" data-id=<?= $station_id ?> data-type="liften" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Liften </h3>
                         <P> <?= $station_elevators ?> aanwezig </P>
@@ -124,7 +124,7 @@ $station_name = $stations[0]["station"];
 
             <section id = "icons_2">
                 <section class = "map_icon">
-                    <img src = "images/icons/ovIcon.png" data-id=<?= $station_id ?> data-type="ov" class="iconImgs"/>
+                    <img src = "images/icons/ovIcon.png" data-id=<?= $station_id ?> data-type="ov-oplaad punten" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> OV oplaad punten </h3>
                         <P> <?= $station_ov ?> aanwezig </P>
@@ -137,7 +137,7 @@ $station_name = $stations[0]["station"];
                     </section>
                 </section>
                 <section class = "map_icon">
-                    <img src = "images/icons/shopIcon.png" data-id=<?= $station_id ?> data-type="shop" class="iconImgs"/>
+                    <img src = "images/icons/shopIcon.png" data-id=<?= $station_id ?> data-type="winkels" class="iconImgs"/>
                     <section class = "icon_description">
                         <h3> Winkels </h3>
                         <P> <?= $station_shops ?> aanwezig </P>
