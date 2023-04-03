@@ -1,12 +1,12 @@
 window.addEventListener('load', init);
 
 let stationData = [];
-let body
+let body;
 let stationPopup;
 let closePopup;
 let stationDetails;
-let stationId
-let stationName
+let stationId;
+let stationName;
 
 console.log(localStorage);
 
@@ -61,8 +61,6 @@ function ajaxSuccessHandler(data) {
 
     for (let type of data){
 
-        //HTML element aanmaken en appendchilden
-
         let stationSpecs = document.createElement("p");
         stationDetails.appendChild(stationSpecs);
         stationSpecs.innerText = `er zijn ${type.amount} ${type.name} aanwezig`;
@@ -74,7 +72,7 @@ function ajaxSuccessHandler(data) {
     stationDetails.appendChild(thisStationMap);
     thisStationMap.innerText = "Zie het complete station";
     thisStationMap.href = "stationmap.php?id="+ stationId;
-    //popup openen
+
     stationPopup.showModal();
 
     closePopup.addEventListener("click", closeDetails);
