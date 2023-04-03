@@ -11,7 +11,7 @@ let barendrecht = new Station("Barendrecht", "13:41", "3A", 80000);
 let dordrecht = new Station("Dordrecht", "13:49", "5", 120000);
 
 let sprinterDordrecht = new Transport("Sprinter", 1, 3, [denHaagCentraal, delftCampus, rotterdamCentraal, blaak, dordrecht]);
-let route = new Route(1, 3, [sprinterDordrecht], delftCampus.location);v 
+let route = new Route(1, 3, [sprinterDordrecht], delftCampus.location);
 
 let delftCampusStop = 1;
 let rotterdamCentraalStop = 2;

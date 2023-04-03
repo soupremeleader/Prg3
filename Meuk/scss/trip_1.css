@@ -163,6 +163,13 @@ main {
   overflow-y: scroll;
   height: 75%;
   width: 100%;
+  position: relative;
+}
+
+.stationSection {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .station_divs {
@@ -219,12 +226,26 @@ main {
 }
 
 .routeDiv {
-  height: 100%;
   width: 75px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
 }
 .routeDiv > img {
   height: 100%;
   width: 100%;
+}
+
+.progress {
+  width: 10px;
+  height: 1%;
+  background-color: rgb(126, 219, 136);
+}
+
+.bar {
+  width: 10px;
+  background-color: rgb(247, 247, 252);
+  margin: auto;
 }
 
 #Untitled-2 {

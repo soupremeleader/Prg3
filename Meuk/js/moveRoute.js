@@ -1,6 +1,7 @@
-//
-// planTripButton.addEventListener('click', moveRoute);
-//
-// function moveRoute() {
-//     let i = 0;
-// }
+let planTripButton = document.getElementById("plan_submit");
+let progress = document.getElementById("progress");
+planTripButton.addEventListener('click', moveRoute);
+
+function moveRoute() {
+
+}

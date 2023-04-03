@@ -19,6 +19,9 @@ class Route {
 
     checkEndStationClose() {
         let locationEndStation = this.getCurrentTransport().getEndStation().location;
+
+        console.log("end: " + locationEndStation.xCoord);
+        // console.log("current: " + this.currentLocation);
         if (locationEndStation.getDistanceBetween(this.currentLocation) <= SIGNAL_DISTANCE_IN_METERS) {
             // navigator.vibrate(1000);
             isClose = true;
@@ -32,6 +35,7 @@ class Route {
     nextStation() {
         let beginTransportLocation = this.getCurrentTransport().getBeginStation().location;
         let endTransportLocation = this.getCurrentTransport().getEndStation().location;
+
         if (this.currentLocation < beginTransportLocation || this.currentLocation > endTransportLocation) {
             throw new Error("location not on route");
         }

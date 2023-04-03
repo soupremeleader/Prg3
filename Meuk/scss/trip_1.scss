@@ -168,6 +168,13 @@ main {
   overflow-y: scroll;
   height: 75%;
   width: 100%;
+  position: relative;
+}
+
+.stationSection {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .station_divs {
@@ -176,7 +183,6 @@ main {
   font-family: "Segoe UI";
   font-weight: bold;
   display: flex;
-
 }
 
 .odd_purple {
@@ -225,13 +231,26 @@ main {
 }
 
 .routeDiv {
-  height: 100%;
   width: 75px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
 
   > img {
     height: 100%;
     width: 100%;
   }
+}
+
+.progress {
+  width: 10px;
+  height: 1%;
+  background-color: $green;
+}
+.bar {
+  width: 10px;
+  background-color: $off-white;
+  margin: auto;
 }
 
 

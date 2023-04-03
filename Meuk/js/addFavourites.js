@@ -2,8 +2,13 @@ let addFavourites = document.getElementById("favourites");
 let stationInputFrom = document.getElementById("from_input");
 let stationInputTo = document.getElementById("to_input");
 
+let isFavoured;
+if (localStorage.getItem(stationInputFrom.value) === stationInputTo.value) {
+    isFavoured = true;
+} else {
+    isFavoured = false;
+}
 
-let isFavoured = false;
 addFavourites.addEventListener('click', switchFavourites);
 // localStorage.clear();
 
@@ -29,6 +34,5 @@ function switchFavourites(e) {
                     console.log(localStorage);
                 }
             }).catch(error => console.log(error));
-
     }
 }
